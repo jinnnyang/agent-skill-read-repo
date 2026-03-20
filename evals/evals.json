@@ -1,0 +1,30 @@
+
+{
+  "skill_name": "deepwiki",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "List all available repositories in DeepWiki.",
+      "expected_output": "A JSON list of available repositories.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Get the documentation structure for the 'facebook/react' repository.",
+      "expected_output": "A JSON object representing the documentation structure.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Read the full documentation for the 'facebook/react' repository.",
+      "expected_output": "A JSON object containing the full documentation content.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "What is the purpose of the 'facebook/react' repository?",
+      "expected_output": "A JSON object containing the answer to the question.",
+      "files": []
+    }
+  ]
+}
