@@ -1,0 +1,38 @@
+Available pages for karpathy/nanoGPT:
+
+- 1 Overview
+  - 1.1 Installation and Requirements
+  - 1.2 Repository Structure
+  - 1.3 Quick Start Guide
+- 2 Model Architecture
+  - 2.1 GPT Configuration
+  - 2.2 Transformer Components
+  - 2.3 Model Initialization and Loading
+  - 2.4 Text Generation
+- 3 Training System
+  - 3.1 Training Loop Architecture
+  - 3.2 Data Loading System
+  - 3.3 Optimizer and Learning Rate Scheduling
+  - 3.4 Evaluation and Checkpointing
+  - 3.5 Distributed Training with DDP
+  - 3.6 Mixed Precision Training
+- 4 Data Preparation
+  - 4.1 Data Pipeline Overview
+  - 4.2 OpenWebText Dataset
+  - 4.3 Shakespeare Character-Level Dataset
+  - 4.4 Shakespeare Token-Level Dataset
+- 5 Configuration System
+  - 5.1 Configuration File Structure
+  - 5.2 Command-Line Override System
+  - 5.3 Training Configuration Examples
+  - 5.4 Finetuning and Evaluation Configurations
+- 6 Using nanoGPT
+  - 6.1 Training a Character-Level Model
+  - 6.2 Reproducing GPT-2
+  - 6.3 Finetuning Pretrained Models
+  - 6.4 Text Generation and Sampling
+  - 6.5 Benchmarking Performance
+- 7 Advanced Topics
+  - 7.1 Scaling Laws Analysis
+  - 7.2 Model Sizing and FLOP Estimation
+  - 7.3 Performance Optimization

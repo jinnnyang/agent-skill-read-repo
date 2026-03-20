@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 MCP (Model Context Protocol) Client - Using requests library
-A command-line helper to interact with the DeepWiki MCP.
+A library to interact with the DeepWiki MCP.
 """
 
 import os
@@ -9,7 +9,6 @@ import sys
 import io
 import requests
 import json
-import argparse
 from typing import Any, Dict, List, Optional, TypedDict, Callable
 
 # Force UTF-8 encoding for stdout
@@ -259,75 +258,3 @@ class DeepWikiFetcher(MCPClient):
         """
         result = self.call_tool("list_available_repos", {})
         return self._extract_text_from_result(result)
-
-
-# --- Command-Line Interface ---
-def setup_arg_parser() -> argparse.ArgumentParser:
-    """Sets up the argument parser."""
-    parser = argparse.ArgumentParser(description="A helper script to interact with the DeepWiki MCP.")
-    parser.add_argument(
-        "--server-url",
-        default=os.environ.get("MCP_SERVER_URL", DEFAULT_SERVER_URL),
-        help=f"The MCP server URL. Defaults to env var MCP_SERVER_URL or {DEFAULT_SERVER_URL}."
-    )
-    subparsers = parser.add_subparsers(dest="action", required=True, help="The action to perform.")
-
-    # Subparser for read_structure
-    parser_structure = subparsers.add_parser("read_structure", help="Get the documentation structure of a repository.")
-    parser_structure.add_argument("--repo-name", required=True, help="The name of the repository (e.g., 'owner/repo').")
-
-    # Subparser for read_contents
-    parser_contents = subparsers.add_parser("read_contents", help="Get the full documentation content of a repository.")
-    parser_contents.add_argument("--repo-name", required=True, help="The name of the repository (e.g., 'owner/repo').")
-
-    # Subparser for ask_question
-    parser_question = subparsers.add_parser("ask_question", help="Ask a question about a repository.")
-    parser_question.add_argument("--repo-name", required=True, help="The name of the repository (e.g., 'owner/repo').")
-    parser_question.add_argument("--question", required=True, help="The question to ask.")
-
-    # Subparser for list_available_repos
-    subparsers.add_parser("list_available_repos", help="List all available repositories.")
-
-    return parser
-
-def main():
-    """Main function to handle command-line arguments."""
-    parser = setup_arg_parser()
-    args = parser.parse_args()
-
-    client = DeepWikiFetcher(server_url=args.server_url)
-
-    # Map actions to client methods
-    action_map: Dict[str, Callable[..., Any]] = {
-        "read_structure": client.fetch_structure,
-        "read_contents": client.fetch_contents,
-        "ask_question": client.ask_question,
-        "list_available_repos": client.list_repos,
-    }
-
-    action_func = action_map.get(args.action)
-    if not action_func:
-        print(f"Error: Unknown action '{args.action}'")
-        parser.print_help()
-        return
-
-    # Prepare arguments for the client method
-    action_args = vars(args).copy()
-    del action_args['action']
-    del action_args['server_url']
-
-    try:
-        result = action_func(**action_args)
-        if result:
-            if isinstance(result, (dict, list)):
-                print(json.dumps(result, indent=2, ensure_ascii=False))
-            else:
-                print(result)
-
-    except (MCPError, RequestError) as e:
-        print(f"An error occurred: {e}")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-
-if __name__ == "__main__":
-    main()
