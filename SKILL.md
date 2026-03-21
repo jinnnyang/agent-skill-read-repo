@@ -1,5 +1,5 @@
 ---
-name: agent-skill-read-repo
+name: read-repo
 description: Interacts with the DeepWiki service to get information about GitHub repositories. Use this skill to get repository documentation structure, read documentation content, ask questions about a repository, and list available repositories. This skill includes a caching mechanism to speed up repeated reads.
 ---
 
