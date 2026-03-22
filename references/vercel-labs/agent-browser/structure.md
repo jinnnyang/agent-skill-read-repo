@@ -1,0 +1,38 @@
+Available pages for vercel-labs/agent-browser:
+
+- 1 Overview
+- 2 Getting Started
+  - 2.1 Installation
+  - 2.2 Quick Start
+  - 2.3 Configuration
+- 3 Architecture
+  - 3.1 System Overview
+  - 3.2 CLI Client (Rust)
+  - 3.3 Daemon Layer
+  - 3.4 Browser Control
+  - 3.5 Communication Protocol
+- 4 Core Concepts
+  - 4.1 Sessions and State
+  - 4.2 Element References (Refs)
+  - 4.3 Snapshots
+  - 4.4 Command Execution Flow
+- 5 Command Reference
+  - 5.1 Navigation and Browser Control
+  - 5.2 Element Interaction
+  - 5.3 Information Retrieval
+  - 5.4 State and Session Management
+  - 5.5 Authentication
+- 6 Security
+  - 6.1 Security Overview
+  - 6.2 Domain Allowlists
+  - 6.3 Action Policies
+  - 6.4 Content Boundaries and Output Limits
+- 7 Advanced Topics
+  - 7.1 Native Daemon Mode
+  - 7.2 Cloud Browser Providers
+  - 7.3 iOS Automation
+  - 7.4 Network Control and Recording
+- 8 Development
+  - 8.1 Build System
+  - 8.2 CI/CD Pipeline
+  - 8.3 Project Structure
