@@ -1,0 +1,33 @@
+Available pages for pywinauto/pywinauto:
+
+- 1 Overview
+  - 1.1 Getting Started
+  - 1.2 How To Guide
+- 2 Core Architecture
+  - 2.1 Application Interface
+  - 2.2 Window and Control Identification
+  - 2.3 Backend System
+- 3 Base Components
+  - 3.1 Base Wrapper System
+  - 3.2 Cross-Platform Application
+  - 3.3 Win32 Functions and Utilities
+- 4 Element Information
+  - 4.1 Element Info Architecture
+  - 4.2 UIA Element Information
+  - 4.3 AT-SPI Element Information
+- 5 Control Wrappers
+  - 5.1 Common Controls
+  - 5.2 UIA Controls
+  - 5.3 AT-SPI Controls
+- 6 Input Simulation
+  - 6.1 Keyboard Input
+  - 6.2 Mouse Input
+- 7 Testing and Utilities
+  - 7.1 Application Testing
+  - 7.2 Taskbar and System Tray
+  - 7.3 Utilities and Clipboard
+- 8 Examples and Tutorials
+  - 8.1 Notepad Automation
+- 9 Development and Contribution
+  - 9.1 CI/CD Pipeline
+  - 9.2 Documentation System
