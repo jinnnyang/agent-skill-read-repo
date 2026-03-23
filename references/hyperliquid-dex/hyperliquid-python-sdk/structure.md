@@ -1,0 +1,36 @@
+Available pages for hyperliquid-dex/hyperliquid-python-sdk:
+
+- 1 Overview
+  - 1.1 Installation & Configuration
+  - 1.2 Project Structure
+- 2 Core API
+  - 2.1 Exchange API
+  - 2.2 Info API
+  - 2.3 WebSocket API
+- 3 Authentication & Signing
+  - 3.1 Order Signing
+  - 3.2 Multi-Signature Operations
+  - 3.3 Agent Authorization
+- 4 Data Types
+  - 4.1 Asset Information Types
+  - 4.2 Order & Transaction Types
+  - 4.3 WebSocket Message Types
+- 5 Basic Usage Examples
+  - 5.1 Order Placement & Management
+  - 5.2 Agent Trading
+  - 5.3 Market Data & Subscriptions
+  - 5.4 Transfers & Account Management
+- 6 Advanced Topics
+  - 6.1 Spot & Perpetual Deployment
+  - 6.2 Precision & Rounding Rules
+  - 6.3 Working with WebSockets
+  - 6.4 Validator & Network Operations
+  - 6.5 Builder Fees & Order Flow
+  - 6.6 Liquidity Adding Strategies
+  - 6.7 Account Abstraction
+  - 6.8 EVM Integration & Block Processing
+- 7 Development & Testing
+  - 7.1 Setting Up Development Environment
+  - 7.2 Testing Framework
+  - 7.3 Example Scripts & Utilities
+  - 7.4 CI/CD Pipeline

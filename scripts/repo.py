@@ -156,6 +156,11 @@ def setup_arg_parser() -> argparse.ArgumentParser:
     parser_read.add_argument("data_type", choices=["structure", "content", "outline"], help="The type of data to read.")
     parser_read.add_argument("--repo", required=True, dest="repo_name", help="The name of the repository (e.g., 'owner/repo').")
     parser_read.add_argument("--without-cache", action="store_true", help="Force fetch from the server, ignoring any local cache.")
+    parser_read.add_argument(
+        "--range",
+        type=str,
+        help="For 'content' data_type, specify a line range to read (e.g., '100-250'). Cannot be used with --without-cache."
+    )
 
     # --- 'ask' command ---
     parser_ask = subparsers.add_parser("ask", help="Ask a question about a repository.")
@@ -175,6 +180,38 @@ def handle_read(args: argparse.Namespace, client: DeepWikiFetcher):
 
     # For 'outline', we operate on 'content' data.
     effective_data_type = "content" if data_type == "outline" else data_type
+
+    # Handle --range argument
+    if args.range:
+        if data_type != "content":
+            print("Error: --range can only be used with 'content' data_type.", file=sys.stderr)
+            sys.exit(1)
+        if args.without_cache:
+            print("Error: --range cannot be used with --without-cache. Content must be read from cache.", file=sys.stderr)
+            sys.exit(1)
+        
+        try:
+            start_str, end_str = args.range.split('-')
+            start_line = int(start_str)
+            end_line = int(end_str)
+            if start_line <= 0 or end_line < start_line:
+                raise ValueError("Line range format is incorrect.")
+        except ValueError:
+            print("Error: Invalid range format. Please use 'start-end', e.g., '100-250'.", file=sys.stderr)
+            sys.exit(1)
+
+        cached_content = read_from_cache(repo_name, effective_data_type)
+        if cached_content is None:
+            print(f"Error: No cached content found for '{repo_name}'. Cannot use --range without cached data.", file=sys.stderr)
+            sys.exit(1)
+        
+        lines = cached_content.splitlines()
+        for i, line in enumerate(lines, 1):
+            if i >= start_line:
+                if i > end_line:
+                    break
+                print(line)
+        return
 
     # 1. Check cache (if not disabled)
     if not args.without_cache:
