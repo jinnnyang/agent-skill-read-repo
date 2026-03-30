@@ -1,0 +1,22 @@
+Available pages for 666ghj/MiroFish:
+
+- 1 MiroFish Overview
+  - 1.1 Getting Started & Configuration
+  - 1.2 System Architecture
+- 2 Frontend Application
+  - 2.1 Home & Project Initialization
+  - 2.2 Graph Construction UI (Step 1)
+  - 2.3 Environment Setup UI (Step 2)
+  - 2.4 Simulation Execution UI (Step 3)
+  - 2.5 Report & Interaction UI (Steps 4 & 5)
+  - 2.6 Frontend API Client Layer
+- 3 Backend Services
+  - 3.1 Knowledge Graph Construction (GraphRAG)
+  - 3.2 Simulation Preparation & Management
+  - 3.3 Simulation Execution Engine
+  - 3.4 Zep Memory Integration
+  - 3.5 Report Agent & Analysis
+  - 3.6 Backend Utilities & Infrastructure
+  - 5.1 Simulation State Files
+  - 5.2 Agent Profiles & Action Logs
+- 6 Glossary
