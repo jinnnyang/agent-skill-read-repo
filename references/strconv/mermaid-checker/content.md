@@ -1,0 +1,1 @@
+Error fetching wiki for strconv/mermaid-checker: Repository not found. Visit https://deepwiki.com/strconv/mermaid-checker to index it.
