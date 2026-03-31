@@ -1,0 +1,71 @@
+Available pages for agentscope-ai/CoPaw:
+
+- 1 Overview
+  - 1.1 Key Concepts
+- 2 Getting Started
+  - 2.1 Installation
+  - 2.2 Quick Start Tutorial
+  - 2.3 Basic Configuration
+- 3 User Guide
+  - 3.1 Using the Console Interface
+  - 3.2 Configuring Communication Channels
+  - 3.3 Managing Model Providers
+  - 3.4 Working with Skills
+  - 3.5 Scheduling Tasks and Heartbeat
+  - 3.6 MCP (Model Context Protocol) Clients
+  - 3.7 Memory and Session Management
+  - 3.8 Workspace and Agent Persona
+  - 3.9 Security and Tool Guard
+- 4 CLI Reference
+  - 4.1 Setup and Control Commands
+  - 4.2 Model Management Commands
+  - 4.3 Channel Management Commands
+  - 4.4 Session and Cron Commands
+  - 4.5 Skills Management Commands
+- 5 Architecture
+  - 5.1 Core Application and Lifecycle
+  - 5.2 Agent Execution System
+  - 5.3 Channel System Architecture
+  - 5.4 Model Provider System
+  - 5.5 Skills and Toolkit System
+  - 5.6 MCP Integration Architecture
+  - 5.7 Memory Management
+  - 5.8 Configuration and Hot-Reload System
+- 6 Console Frontend
+  - 6.1 Application Structure and Routing
+  - 6.2 UI Components and Pages
+  - 6.3 API Client and State Management
+  - 6.4 Internationalization
+- 7 Configuration Reference
+  - 7.1 config.json Schema
+  - 7.2 Provider Configuration
+  - 7.3 Environment Variables
+  - 7.4 Working Directory Structure
+  - 7.5 HEARTBEAT.md and Scheduled Digests
+- 8 Deployment
+  - 8.1 Docker Deployment
+  - 8.2 Production Considerations
+  - 8.3 Cloud Deployment Options
+- 9 Troubleshooting and FAQ
+  - 9.1 Installation Issues
+  - 9.2 Model Provider Errors
+  - 9.3 Channel Configuration Issues
+  - 9.4 Scheduled Task Problems
+- 10 Development Guide
+  - 10.1 Development Setup
+  - 10.2 Project Structure
+  - 10.3 Creating Custom Channels
+  - 10.4 Creating Custom Skills
+  - 10.5 Frontend Development
+  - 10.6 Testing
+- 11 Contributing
+  - 11.1 Contribution Guidelines
+  - 11.2 Code Style and Standards
+  - 11.3 Pull Request Process
+  - 11.4 Release Process
+- 12 API Reference
+  - 12.1 Agent Endpoints
+  - 12.2 Model Provider Endpoints
+  - 12.3 Configuration Endpoints
+- 13 License and Credits
+- 14 Glossary
